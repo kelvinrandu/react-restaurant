@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import RelatedMenu from './RelatedMenu';
 
 class Menu extends Component {
     constructor() {
@@ -15,16 +16,33 @@ class Menu extends Component {
         })
       }
   render() {
-    const content = this.state.checked 
-    ? <div> Content </div>
+
+    const content = this.state.checked
+    
+      
+    ? <div> 
+       <ul> 
+            {this.props.menu.choices.map((menu)=> {
+
+              return         <div>
+      
+           <input type="checkbox" name="{menu.name}" value="{menu.name}"  /> {menu.name} 
+    
+         </div>  
+
+            })}
+        </ul> 
+
+         </div>
+
     : null;
     return (
         <div>
-       <li> 
-           <input type="checkbox" name="{this.props.menu.name}" value="Bike" 
+      
+           <input type="checkbox" name="{this.props.menu.name}" value="{this.props.menu.name}" 
             checked={ this.state.checked } 
-          onChange={ this.handleChange } /> {this.props.menu.name}
-        </li> 
+          onChange={ this.handleChange }  /> {this.props.menu.name} 
+        
          { content }
          </div> 
     

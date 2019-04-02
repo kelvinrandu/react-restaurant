@@ -2,33 +2,33 @@ import React, { Component } from 'react';
 import './App.css';
 import MenusList from './MenusList';
 
-let meeting = [
+let menus = [
   {
-  name: 'Salad',
-  choices: [
-  { name: 'Santa Fe' },
-  { name: 'Greek' },
-  { name: 'Asian' },
-  ],
-  related: [
-  {
-  name: 'Dressing',
-  choices: [
-  { name: 'Italian' },
-  { name: 'Blue Cheese' },
-  { name: 'Ranch' },
-  ]
-  },
-  {
-  name: 'Bread',
-  choices: [
-  { name: 'Italian' },
-  { name: 'Flat' },
-  { name: 'Sourdough' },
-  ]
-  }
-  ]
-  },
+          name: 'Salad',
+          choices: [
+          { name: 'Santa Fe' },
+          { name: 'Greek' },
+          { name: 'Asian' },
+          ],
+          related: [
+          {
+          name: 'Dressing',
+          choices: [
+          { name: 'Italian' },
+          { name: 'Blue Cheese' },
+          { name: 'Ranch' },
+          ]
+          },
+          {
+          name: 'Bread',
+          choices: [
+          { name: 'Italian' },
+          { name: 'Flat' },
+          { name: 'Sourdough' },
+          ]
+          }
+                  ]
+          },
   {
   name: 'Entree',
   choices: [
@@ -59,15 +59,12 @@ let meeting = [
 
 class App extends Component {
   render() {
-    console.log(this.props.meeting);
 
     return (
       <div className="App">
           <h1> menu </h1>
 
-           <MenusList  menus={meeting} />
-          
-   
+           <MenusList  menus={menus} />
           
 
       </div>

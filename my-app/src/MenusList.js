@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Menu from './Menu';
+import RelatedMenu from './RelatedMenu';
 
 class MenusList extends Component {
   render() {
