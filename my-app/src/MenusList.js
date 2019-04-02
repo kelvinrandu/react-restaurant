@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
+import Menu from './Menu';
 
 class MenusList extends Component {
   render() {
     return (
        <ul> 
-             <div>{this.props.dataMeeting.title}</div>
+            {this.props.menus.map((menu)=> {
+              return <Menu menu= {menu}/>
+
+            })}
         </ul> 
     
     );
