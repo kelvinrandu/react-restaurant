@@ -7,10 +7,11 @@ class MenusList extends Component {
     return (
        <ul> 
             {this.props.menus.map((menu)=> {
-              return <Menu menu= {menu}/>
+              return <Menu menu= {menu} key= {menu.name}  />
 
             })}
         </ul> 
+        
     
     );
   }
